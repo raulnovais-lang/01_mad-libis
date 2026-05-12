@@ -6,7 +6,7 @@ dicionario_cores={"verde":20,
                   "azul":10,
                   "amarelo":60,
                   "lilas":"D0"}
-
+fase= 1
 lista_sequencia= []
 
 def limpar_tela():
@@ -57,13 +57,14 @@ while True:
         cor = dicionario_abreviacoes.get(letra)
         lista_de_respota.append(cor)
     if lista_de_respota != lista_sequencia:
-        print("vc errou linda")
+        print(f"vc perdeu na fase {fase}, linda")
         print("a sequencia era ")
         print(*lista_sequencia)
         break
     else:
         print("vc acertou")
-        print("vamos para proxima etapa bora?")
+        fase = fase +1
+        print(f"vamos para fase {fase} bora?")
         input("aperte enter quando vc tive preparado... ")
         limpar_tela()
 
