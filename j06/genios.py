@@ -28,7 +28,7 @@ print("""
       *-*-*-*                                  *-*-*-*
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 """)
-input("pressoine enter para começar....")
+input("pressione enter para começar....")
 
 limpar_tela()   
 lista_cores = ["verde","azul","amarelo","lilas"]
@@ -45,7 +45,7 @@ while True:
         A=azul
         U=amarelo
         L=lilas""")
-    resposta= input("digite a sequência correta: ")
+    resposta= input("digite a sequência correta: ").upper()
     
     dicionario_abreviacoes=  {  "R":"verde",
                                 "A":"azul",
@@ -59,5 +59,11 @@ while True:
     if lista_de_respota != lista_sequencia:
         print("vc errou linda")
         print("a sequencia era ")
-        
+        print(*lista_sequencia)
+        break
+    else:
+        print("vc acertou")
+        print("vamos para proxima etapa bora?")
+        input("aperte enter quando vc tive preparado... ")
+        limpar_tela()
 
