@@ -110,5 +110,14 @@ def gerar_tracos(palavra: str) -> list:
     #    tracos.append("_")
     return tracos
 
-def perguntar_letra():
-    input("escoha uma palvra")
+def perguntar_letra() -> str:
+    resposta=input("escoha uma palvra: ").upper()
+    while len (resposta)!=1:
+        resposta = input("eu disse apenas uma letra: ").upper()
+        return resposta
+letra = perguntar_letra()
+print(letra)
+
+def jogar_forca():
+    #tela inicial de jogo
+    pass
