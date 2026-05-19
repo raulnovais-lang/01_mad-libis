@@ -151,7 +151,10 @@ def jogar_forca():
 
         #imprimo a lista de traços 
         print("         ", *lista_tracos)
-
+        if "_" not in lista_tracos:
+                print("Parabéns!!!")
+                print("tente jogar novamente!")
+                break
         #pergutar a letra e guardar em uma variavel 
         letra_chutada = perguntar_letra() 
 
@@ -164,9 +167,11 @@ def jogar_forca():
         if letra_chutada in palavra_escolida:
             contador = 0
             for letra_palavra in palavra_escolida:
-                if letra_palavra == letra_chutada
-                lista_tracos[contador] = letra_chutada
-            contador = contador +1
+                if letra_palavra == letra_chutada:
+                    lista_tracos[contador] = letra_chutada
+                contador = contador +1
+       
+
 
         
 
